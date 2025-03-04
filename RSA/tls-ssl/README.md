@@ -47,6 +47,9 @@ Esto crea una clave privada RSA de 2048 bits en el archivo server.key.
 ```
 Esto crea un certificado válido por 365 días en el archivo server.crt.
 
+### Nota
+estos archivos tienen que estar en el mismo directorio de server
+
 ## Notas sobre Seguridad
 * Certificados Autofirmados: El cliente usa context.verify_mode = ssl.CERT_NONE para aceptar certificados no confiables. En producción, elimina esta línea y usa context.load_verify_locations() con un certificado de CA confiable.
 * IP y Puerto: Asegúrate de que la IP (192.168.60.28) y el puerto (12345) coincidan con los del servidor y estén accesibles en tu red.
